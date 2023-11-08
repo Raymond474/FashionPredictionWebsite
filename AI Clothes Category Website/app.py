@@ -53,12 +53,17 @@ def confidenceChance(confidence):
 def get_image(filename):
     return send_from_directory('static', filename)
 
+#returns html pages to the user
+@app.route('/templates/<path:filename>', methods=['GET', 'POST'])
+def get_template(filename):
+    return (flask.render_template(filename))
+
 # Set up the main route
 @app.route('/', methods=['GET', 'POST'])
 def main():
     if flask.request.method == 'GET':
         # Just render the initial form, to get input
-        return(flask.render_template('main.html'))
+        return(flask.render_template('fashion_classifier.html'))
     
     if flask.request.method == 'POST':
         # Extract the input
@@ -71,7 +76,7 @@ def main():
             image = Image.open(file)
         except Exception as e:
             #add text saying that the image submitted doesn't work
-            return flask.render_template('main.html', badfile=1)
+            return flask.render_template('fashion_classifier.html', badfile=1)
 
         #save image differently for jpeg and pngs
         # if (image.format.lower() == 'jpeg'):
@@ -97,7 +102,7 @@ def main():
             index += 1
     
         # Render the form again, but add in the prediction
-        return flask.render_template('main.html', confidence=confidenceChance(max_value),result= categories[max_index])
+        return flask.render_template('fashion_classifier.html', confidence=confidenceChance(max_value),result= categories[max_index])
 
 
 if __name__ == '__main__':
