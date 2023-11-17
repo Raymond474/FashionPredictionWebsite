@@ -15,6 +15,9 @@
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
     crossorigin="anonymous" />
 
+  <!-- Pictures Text Hover Effect -->
+  <link rel="stylesheet" href="../static/style/projectsStyle.css">
+
   <script src="https://kit.fontawesome.com/208883a4cd.js" crossorigin="anonymous"></script>
 
   <title>Clothing Categorization</title>
@@ -56,27 +59,131 @@
     <h1>Projects</h1>
   </div>
 
-  <!-- List of Projects I have worked on -->
+  <!-- Grid of Projects I have worked on -->
   <div class="container">
-    <ul class="lead">
-      <li>
-        <a href="https://github.com/Raymond474/vaccineManagementWebsite">Vaccine Management</a>
-      </li>
-      <li>
-        <a href="https://github.com/Raymond474/VideoCompression">Video Compression</a>
-      </li>
-      <li>
-        <a href="https://colab.research.google.com/drive/17Ee_6Aw0VXaGb7Q37-jDjvRfp9Z98rtp?usp=sharing">Salary Prediction</a>
-      </li>
-      <li>
-        <a href="https://docs.google.com/presentation/d/1KCz81wCHwUaFjvfiYKrKiYknf7IgsM4eO_HEyUPl_8Y/edit?usp=sharing">Global Warming Visualization</a>
-      </li>
-      <li>
-        <a href="https://7drl-group.itch.io/bembe">Game Jam</a>
-      </li>
-    </ul>
+    <div class="row">
+
+      <div class="col">
+        <h4 class="text-center text-capitalize">
+          <a href="https://github.com/Raymond474/VideoCompression">Video Compression</a>
+        </h4>
+        <div class="containerHover">
+          <img src="../static/images/projectsThumbnail/video.png"
+            alt="A TV screen getting compressed by a hydraulic press" class="image">
+          <div class="overlay">
+            <div class="text">
+              I implemented a video compression algorithm using UCQ and error diffusion,
+              allowing users to choose different parameters for how they want the video to be compressed.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4 class="text-center text-capitalize">
+          <a href="https://github.com/Raymond474/vaccineManagementWebsite">Vaccine Management Website</a>
+        </h4>
+        <div class="containerHover">
+          <img src="../static/images/projectsThumbnail/vaccine.png" alt="A person getting vaccinated" class="image">
+          <div class="overlay">
+            <div class="text">
+              Using a login system connected to a MySQL database, when logging in,
+              it checks if you are an administrator or patient, giving different
+              levels of access to the website. Such as if you received a vaccine
+              and vaccine availability.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+        <h4 class="text-center text-capitalize">
+          <a href="https://colab.research.google.com/drive/17Ee_6Aw0VXaGb7Q37-jDjvRfp9Z98rtp?usp=sharing">Salary
+            Prediction</a>
+        </h4>
+        <div class="containerHover">
+          <img src="../static/images/projectsThumbnail/rf.png"
+            alt="A line graph showing my Random Forest's prediction accuracy" class="image">
+          <div class="overlay">
+            <div class="text">
+              This is a project I worked on with 2 other students to predict a job's salary based
+              on its advertisement. We implemented several regression models, preprocessing data,
+              and data analysis of the results.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4 class="text-center text-capitalize">
+          <a
+            href="https://docs.google.com/presentation/d/1KCz81wCHwUaFjvfiYKrKiYknf7IgsM4eO_HEyUPl_8Y/edit?usp=sharing">Global
+            Warming Visualization</a>
+        </h4>
+        <div class="containerHover">
+          <img src="../static/images/projectsThumbnail/map.png"
+            alt="A Chloropleth map showing the increase in global temperature in 2015 across different countries"
+            class="image">
+          <div class="overlay">
+            <div class="text">
+              I worked with 3 other students on this project to show climate change's impact
+              using data analysis. To do this, we first examined different datasets available,
+              combined different datasets, and then cleaned the data. Finally, we used Tableau
+              to create the visualizations.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+        <h4 class="text-center text-capitalize">
+          <a href="https://7drl-group.itch.io/bembe">Game Jam</a>
+        </h4>
+        <div class="containerHover">
+          <img src="../static/images/projectsThumbnail/game.png" alt="A drawing resembling ancient Mayan art"
+            class="image">
+          <div class="overlay">
+            <div class="text">
+              This is a video game I made with 5 other people online. I was the AI
+              programmer in charge of all enemies and the player; this involved
+              movement, attacks, health, vision, and implementation of animations.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4 class="text-center text-capitalize">
+          <a href="https://github.com/Raymond474/Interpreters">Intepreter</a>
+        </h4>
+        <div class="containerHover">
+          <img src="../static/images/projectsThumbnail/interpreter.png"
+            alt="A picture showing code in a high-level programming language on one screen 
+            with an arrow pointing to an 'interpreter,' a red block that points an arrow to 
+            binary code on a different screen. The screen with binary code has a thought 
+            bubble that says, 'Oh, now I understand!'"
+            class="image">
+          <div class="overlay">
+            <div class="text">
+              These are different parsers I made for my Compilers and Interpreters class.
+              They are supposed to resemble how the Python interpreter works, processing
+              input and checking if it is valid using Automata Theory.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
+  <br>
   <!-- Footer with Links -->
   <footer class="container-fluid mt-auto bg-secondary text-center bottom-0">
     <a href="mailto:mraymond474@gmail.com" class="link-light"><i class="fa-solid fa-envelope"></i>
